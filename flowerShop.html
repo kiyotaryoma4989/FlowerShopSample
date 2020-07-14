@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <title>フラワーショップ</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="お花屋さんのサンプルです">
+  <meta name="author" content="kiyotaryoma4989が制作しました">
+  <meta name="keywords" content="花屋,フラワー,flower,shop">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1><img src="images/logo.svg" alt="Flower Shop" /></h1>
+    <nav>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">FLOWERS</a></li>
+        <li><a href="#">ACCESS</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="lead">
+      <div class="text">
+        <h2><img src="images/logo2.svg" alt="Flower Shop" /></h2>
+        <p>
+          フラワーショップはあなたの街のお花屋さん<br>
+          贈り物からお部屋の飾りつけまで<br>
+          幅広くリクエストにお答えいたします
+        </p>
+      </div>
+      <a href="#product">View More<br>&#9662;</a>
+    </section>
+
+    <section id="product">
+      <h2>Ranking</h2>
+      <p>当店の人気商品ランキング</p>
+
+      <div class="item">
+        <ol>
+          <li>
+            <figure><img src="images/flower_01.jpg" alt="バラの写真" /></figure>
+            <dl>
+              <dt><span>1</span>バラ</dt>
+              <dd>
+                １番人気はやっぱりバラ。<br>
+                当店では珍しい色のバラも各種取り揃えております。お気軽にお問い合わせください。
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <figure><img src="images/flower_02.jpg" alt="ユリの写真" /></figure>
+            <dl>
+              <dt><span>2</span>ユリ</dt>
+              <dd>
+                ２番人気はユリ。<br>
+                式典から開店祝いまで、幅広く贈りものとして好評をいただいています。１本から大量注文まで、お気軽にお問い合わせください。
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <figure><img src="images/flower_03.jpg" alt="サボテンの写真" /></figure>
+            <dl>
+              <dt><span>3</span>サボテン</dt>
+              <dd>
+                ３番人気はサボテン。<br>
+                一人暮らしでもお世話が楽なサボテンも当店の人気商品。珍しい多肉植物もご用意できますので、お気軽にお問い合わせください。
+              </dd>
+            </dl>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="accessWrap">
+      <div class="access">
+        <h2>ACCESS</h2>
+        <figure class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5227.99291253194!2d135.49328885099985!3d34.70166473276323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e68dfd4c8a17%3A0xf82888527fca0fb4!2z44Oo44OJ44OQ44K344Kr44Oh44OpIOODnuODq-ODgeODoeODh-OCo-OCouaiheeUsA!5e0!3m2!1sja!2sjp!4v1591682316849!5m2!1sja!2sjp"
+            width="600" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
+        </figure>
+        <table>
+          <tbody>
+            <tr>
+              <th>店名</th>
+              <td>フラワーショップ</td>
+            </tr>
+            <tr>
+              <th>住所</th>
+              <td>大阪府大阪市北区大深町１−１</td>
+            </tr>
+            <tr>
+              <th>TEL</th>
+              <td>06-0000-0000</td>
+            </tr>
+            <tr>
+              <th>営業時間</th>
+              <td>10:00 〜 19:00</td>
+            </tr>
+            <tr>
+              <th>定休日</th>
+              <td>不定休</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>
+      <small>&copy; 2020 flowershop.com All Right Reserved.</small>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    // #で始まるアンカーをクリックした場合にスクロール
+    $(function () {
+      var headerHeight = $('header').outerHeight();//固定ヘッダーの要素指定
+      var urlHash = location.hash;
+      if (urlHash) {
+        $('body,html').stop().scrollTop(0);
+        setTimeout(function () {
+          var target = $(urlHash);
+          var position = target.offset().top - headerHeight;
+          $('body,html').stop().animate({ scrollTop: position }, 400);
+        }, 100);
+      }
+      $('a[href^="#"]').click(function () {
+        var href = $(this).attr("href");
+        var target = $(href);
+        var position = target.offset().top - headerHeight;
+        $('body,html').stop().animate({ scrollTop: position }, 400);
+        return false;
+      });
+    });
+  </script>
+</body>
+
+</html>

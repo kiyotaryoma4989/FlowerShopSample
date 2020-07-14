@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+body {
+  font-size: 16px;
+  font-family: "Sawarabi Mincho","游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    sans-serif;
+  color: #333;
+  background: #fff;
+  overflow-y: scroll;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+:root {
+  --main-width: 1200px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  border-top: 5px solid #6a4c8e;
+  background: #fff;
+}
+header h1 {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+header nav {
+  background: #6a4c8e;
+}
+header nav ul {
+  width: var(--main-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #6a4c8e;
+  border-bottom: 1px solid #6a4c8e;
+}
+header nav ul li {
+  width: 25%;
+}
+header nav ul li a {
+  display: block;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+header nav ul li a:hover {
+  background:  #fff;
+  color:  #6a4c8e;
+}
+
+.lead {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-top: 115px;
+  background: url(../images/lead_bg.jpg) no-repeat center 115px;
+  background-size: cover;
+  display: table;
+  position: relative;
+}
+.lead .text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  padding: 0 25%;
+}
+.lead .text p {
+  padding-top: 30px;
+  font-size: 2.0rem;
+  line-height: 2;
+  color: #fff;
+}
+.lead a {
+  display: block;
+  border: 1px solid #6a4c8e;
+  background: #fff;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  width: 200px;
+  color: #6a4c8e;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  text-align: center;
+  margin-left: -100px;
+}
+
+#product {
+  background: #F3E9CF;
+  padding: 80px 0 120px;
+}
+#product h2 {
+  text-align: center;
+  font-size: 5.0rem;
+  color: #6a4c8e;
+  margin-bottom: 20px;
+}
+#product p {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 60px;
+}
+#product .item {
+  width: var(--main-width);
+  margin: 0 auto;
+}
+#product .item ol {
+  display: flex;
+  align-items: flex-end;
+}
+#product .item ol li {
+  box-sizing: border-box;
+  width: 30%;
+  margin: 0 1%;
+  border: 10px solid #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+}
+#product .item ol li:nth-child(1) {
+  width: 40%;
+  order: 2;
+}
+#product .item ol li:nth-child(2) {
+  order: 1;
+}
+#product .item ol li:nth-child(3) {
+  order: 3;
+}
+#product .item ol li dl{
+  padding: 20px 10px;
+}
+#product .item ol li dl dt{
+  font-size: 3.0rem;
+  color: #6a4c8e;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #ccc;
+  margin-bottom: 10px;
+  position: relative;
+}
+#product .item ol li dl dt span{
+  display: block;
+  text-align: center;
+  width: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  background: #6a4c8e;
+  position: absolute;
+  color: #fff;
+  top: -100px;
+  left: 0;
+}
+#product .item ol li dl dd{
+  line-height: 2;
+}
+
+.accessWrap {
+  background: #6a4c8e;
+  padding: 50px 0;
+}
+.access {
+  width: var(--main-width);
+  margin: 0 auto;
+  overflow: hidden;
+}
+.access h2 {
+  width: 48%;
+  float: right;
+  font-size: 3.0rem;
+  color: #fff;
+  padding: 20px 0 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #fff;
+}
+.access .map {
+  width: 48%;
+  height: 0;
+  float: left;
+  overflow: hidden;
+  padding-bottom: 40%;
+  position: relative;
+  margin-right: 4%;
+}
+.access .map iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.access table {
+  width: 48%;
+  float: right;
+  color: #6a4c8e;
+}
+.access table,.access table th,.access table td {
+  border: 1px solid #6a4c8e;
+}
+.access table th,.access table td {
+  padding: 20px;
+  background: #fff;
+  line-height: 1.5;
+}
+.access table th {
+  background: #f2ecf8;
+}
+
+footer small {
+  border-top: 1px solid #fff;
+  text-align: center;
+  background: #6a4c8e;
+  line-height: 1.5;
+  color: #fff;
+  padding: 20px 0;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////
+  以下レスポンシブ
+  //////////////////////////////////////////////////////////////////////////////////*/
+@media screen and (max-width: 560px) {
+  :root {
+    --main-width: 100%;
+  }
+  header h1 {
+    width: 200px;
+    padding: 15px 0;
+  }
+  header nav ul li a {
+    font-size: 1.2rem;
+  }
+  .lead {
+    padding-top: 90px;
+    background: url(../images/lead_bg.jpg) no-repeat center 90px;
+  }
+  .lead .text {
+    padding: 0 5%;
+  }
+  .lead .text p {
+    font-size: 1.6rem;
+  }
+  #product {
+    padding: 50px 0 60px;
+  }
+  #product h2 {
+    font-size: 3.0rem;
+  }
+  #product p {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+  }
+  #product .item ol {
+    display: block;
+  }
+  #product .item ol li,
+  #product .item ol li:nth-child(1) {
+    width: 90%;
+    margin: 0 5% 30px;
+  }
+  .accessWrap {
+    padding: 20px 0 50px;
+  }
+  .access h2 {
+    width: 90%;
+    float: none;
+    padding: 20px 0 30px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .access .map {
+    width: 90%;
+    float: none;
+    padding-bottom: 40%;
+    margin-right: 0;
+    margin: 0 auto;
+  }
+  .access table {
+    width: calc(90% + 2px);
+    float: none;
+    margin: 0 auto;
+  }
+  .access table th,.access table td {
+    padding: 10px;
+    font-size: 1.4rem;
+  }
+  .access table th {
+    width: 40%;
+  }
+  footer small {
+    padding: 10px;
+  }
+}
